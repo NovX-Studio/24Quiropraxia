@@ -60,8 +60,25 @@
                 <a href="index.html#faq" class="text-sm uppercase tracking-widest text-white/80 hover:text-white transition-colors">FAQ</a>
                 <a href="index.html#contacto" class="text-sm uppercase tracking-widest text-white/80 hover:text-white transition-colors">Contacto</a>
             </div>
+
+            <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 z-50 group" aria-label="Menu" aria-expanded="false">
+                <span class="w-6 h-[2px] bg-white mb-1.5 transition-all group-hover:bg-tierra hamburger-line"></span>
+                <span class="w-6 h-[2px] bg-white transition-all group-hover:bg-tierra hamburger-line"></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-noche text-claro z-40 flex flex-col justify-center items-center translate-x-full">
+        <div class="flex flex-col items-center gap-8 text-2xl font-display">
+            <a href="index.html" class="mobile-link hover:text-tierra transition-colors">Inicio</a>
+            <a href="beneficios.html" class="mobile-link hover:text-tierra transition-colors">Beneficios</a>
+            <a href="quienes-somos.html" class="mobile-link hover:text-tierra transition-colors">Quiénes Somos</a>
+            <a href="index.html#sucursales" class="mobile-link hover:text-tierra transition-colors">Sucursales</a>
+            <a href="index.html#faq" class="mobile-link hover:text-tierra transition-colors">FAQ</a>
+            <a href="index.html#contacto" class="mobile-link hover:text-tierra transition-colors">Contacto</a>
+        </div>
+    </div>
 
     <main id="main-content" class="pt-20 bg-noche">
 
@@ -170,5 +187,48 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5493513323096?text=Hola,%20quiero%20consultar" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-tierra rounded-full flex justify-center items-center text-white z-50 shadow-lg hover:bg-cobre transition-colors group" aria-label="WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+    </a>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof gsap === 'undefined') return;
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            menuBtn.setAttribute('aria-expanded', isMenuOpen);
+
+            if (isMenuOpen) {
+                gsap.to(mobileMenu, { x: 0, duration: 0.5, ease: 'power3.out' });
+                menuBtn.querySelectorAll('span')[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                menuBtn.querySelectorAll('span')[1].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                menuBtn.querySelectorAll('span').forEach(s => s.classList.replace('bg-noche', 'bg-white'));
+            } else {
+                gsap.to(mobileMenu, { x: '100%', duration: 0.5, ease: 'power3.in' });
+                menuBtn.querySelectorAll('span')[0].style.transform = 'none';
+                menuBtn.querySelectorAll('span')[1].style.transform = 'none';
+                if(window.scrollY <= 80) {
+                    menuBtn.querySelectorAll('span').forEach(s => s.classList.replace('bg-white', 'bg-noche'));
+                }
+            }
+        }
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+        }
+    });
+    </script>
 </body>
 </html>

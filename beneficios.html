@@ -11,12 +11,12 @@
     <link rel="icon" type="image/png" href="https://24quiropraxia.com.ar/wp-content/uploads/2019/04/logo-24.png" sizes="192x192">
     <link rel="apple-touch-icon" href="https://24quiropraxia.com.ar/wp-content/uploads/2019/04/logo-24.png">
 
-    <!-- Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -43,7 +43,7 @@
         h1, h2, h3, h4, h5, h6, .font-display { font-family: "Playfair Display", serif; }
 
         section[id] { scroll-margin-top: 80px; }
-
+        p, li, .text-body { text-align: justify; }
 
     </style>
 
@@ -79,7 +79,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
+    
     <div id="mobile-menu" class="fixed inset-0 bg-noche text-claro z-40 flex flex-col justify-center items-center translate-x-full">
         <div class="flex flex-col items-center gap-8 text-2xl font-display">
             <a href="index.html" class="mobile-link hover:text-tierra transition-colors">Inicio</a>
@@ -93,15 +93,15 @@
 
     <main id="main-content" class="pt-20 bg-noche">
 
-        <!-- Hero -->
+        
         <section class="bg-noche text-hueso py-16 md:py-20">
             <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                 <h1 class="font-display text-5xl md:text-7xl mb-4 leading-tight text-balance">La quiropraxia es para todos</h1>
-                <p class="text-white/70 text-base md:text-lg font-light max-w-2xl mx-auto text-pretty">Cuidado adaptado a cada etapa de la vida. Descubrí cómo la quiropraxia puede ayudarte a vos y a tu familia.</p>
+                <p class="text-white/70 text-base md:text-lg font-light max-w-2xl mx-auto text-pretty text-center">Cuidado adaptado a cada etapa de la vida. Descubrí cómo la quiropraxia puede ayudarte a vos y a tu familia.</p>
             </div>
         </section>
 
-        <!-- Beneficios Grid -->
+        
         <section class="py-20 md:py-24 bg-claro">
             <div class="max-w-6xl mx-auto px-6 lg:px-8">
                 <div class="text-center mb-14">
@@ -109,7 +109,7 @@
                     <p class="text-gray-600 text-lg font-light text-center max-w-none">Cuidado adaptado a cada etapa de la vida.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Tercera Edad -->
+                    
                     <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                         <div class="flex items-start gap-5">
                             <img src="https://24quiropraxia.com.ar/wp-content/uploads/2019/03/11355236_707586139370890_1919279143_n.jpeg" alt="" class="w-20 h-20 rounded-xl object-cover shrink-0 mt-1" loading="lazy" decoding="async">
@@ -124,7 +124,7 @@
                         </div>
                     </div>
 
-                    <!-- Embarazo -->
+                    
                     <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                         <div class="flex items-start gap-5">
                             <img src="https://24quiropraxia.com.ar/wp-content/uploads/2019/03/36990689_1909579752427364_8786502411775639552_n.jpeg" alt="" class="w-20 h-20 rounded-xl object-cover shrink-0 mt-1" loading="lazy" decoding="async">
@@ -139,7 +139,7 @@
                         </div>
                     </div>
 
-                    <!-- Columna Vertebral -->
+                    
                     <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                         <div class="flex items-start gap-5">
                             <img src="https://24quiropraxia.com.ar/wp-content/uploads/2019/03/sdf.jpeg" alt="" class="w-20 h-20 rounded-xl object-cover shrink-0 mt-1" loading="lazy" decoding="async">
@@ -154,7 +154,7 @@
                         </div>
                     </div>
 
-                    <!-- Deportistas -->
+                    
                     <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                         <div class="flex items-start gap-5">
                             <img src="https://24quiropraxia.com.ar/wp-content/uploads/2019/03/28467856_1161257390676581_35056384068696844_n.jpeg" alt="" class="w-20 h-20 rounded-xl object-cover shrink-0 mt-1" loading="lazy" decoding="async">
@@ -162,7 +162,7 @@
                                 <span class="text-tierra/40 font-display text-5xl leading-none block mb-1">04</span>
                                 <h3 class="text-2xl font-display mb-2">Deportistas</h3>
                                 <p class="text-gray-600 font-light text-pretty">Tanto amateur como profesional, el deportista debe acudir al quiropráctico por 3 razones:</p>
-                                <ul class="text-gray-600 font-light text-sm space-y-1 mt-2 list-disc list-inside">
+                                <ul class="text-gray-600 font-light text-sm space-y-1 mt-2 list-disc list-outside ml-4">
                                     <li><strong class="font-medium">Mejora el rendimiento:</strong> La corrección de subluxaciones mejora la movilidad articular, la flexibilidad muscular, el balance y el tiempo de activación muscular.</li>
                                     <li><strong class="font-medium">Lesiones deportivas:</strong> Reduce eficazmente dolores lumbares y cervicales, y tiene efectos positivos en esguinces de tobillo, dolor de rodilla y hombro.</li>
                                     <li><strong class="font-medium">Prevención:</strong> La atención regular disminuye factores como el acortamiento muscular, la tensión neural y la restricción articular que causan desgarros y contracturas.</li>
@@ -174,7 +174,7 @@
                         </div>
                     </div>
 
-                    <!-- Bebés y Niños -->
+                    
                     <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                         <div class="flex items-start gap-5">
                             <img src="https://24quiropraxia.com.ar/wp-content/uploads/2019/03/50728427_2183852511666752_3686978279698333696_n.jpeg" alt="" class="w-20 h-20 rounded-xl object-cover shrink-0 mt-1" loading="lazy" decoding="async">
@@ -193,7 +193,7 @@
             </div>
         </section>
 
-        <!-- CTA Final -->
+        
         <section class="bg-noche text-white py-20">
             <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
                 <h2 class="font-display text-4xl md:text-5xl mb-6 leading-tight">¿Listo para cuidar tu columna?</h2>
@@ -243,19 +243,19 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
+    
     <a href="https://wa.me/5493513323096?text=Hola,%20quiero%20consultar" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-tierra rounded-full flex justify-center items-center text-white z-50 shadow-lg hover:bg-cobre transition-colors group" aria-label="WhatsApp">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
     </a>
 
-    <!-- GSAP -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         if (typeof gsap === 'undefined') return;
 
-        // Mobile Menu
+
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');

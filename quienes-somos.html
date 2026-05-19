@@ -40,6 +40,7 @@
         body { font-family: "DM Sans", sans-serif; background-color: oklch(0.97 0.005 83); color: oklch(0.14 0.023 278); overflow-x: hidden; }
         h1, h2, h3, h4, h5, h6, .font-display { font-family: "Playfair Display", serif; }
         section[id] { scroll-margin-top: 80px; }
+        p, li, .text-body { text-align: justify; }
 
     </style>
 </head>
@@ -67,7 +68,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
+    
     <div id="mobile-menu" class="fixed inset-0 bg-noche text-claro z-40 flex flex-col justify-center items-center translate-x-full">
         <div class="flex flex-col items-center gap-8 text-2xl font-display">
             <a href="index.html" class="mobile-link hover:text-tierra transition-colors">Inicio</a>
@@ -81,15 +82,15 @@
 
     <main id="main-content" class="pt-20 bg-noche">
 
-        <!-- Hero -->
+        
         <section class="bg-noche text-hueso py-24 md:py-32">
             <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                 <h1 class="font-display text-5xl md:text-7xl mb-6 leading-tight text-balance">Nuestro espacio</h1>
-                <p class="text-white/70 text-lg md:text-xl font-light max-w-2xl mx-auto text-pretty">Instalaciones pensadas para tu bienestar. Conocé quiénes somos.</p>
+                <p class="text-white/70 text-lg md:text-xl font-light max-w-2xl mx-auto text-pretty text-center">Instalaciones pensadas para tu bienestar. Conocé quiénes somos.</p>
             </div>
         </section>
 
-        <!-- About Text -->
+        
         <section class="py-20 bg-claro">
             <div class="max-w-4xl mx-auto px-6 lg:px-8">
                 <div class="text-center mb-16">
@@ -111,7 +112,7 @@
             </div>
         </section>
 
-        <!-- Vision/Values -->
+        
         <section class="py-20 bg-hueso">
             <div class="max-w-6xl mx-auto px-6 lg:px-8">
                 <div class="grid md:grid-cols-3 gap-8">
@@ -134,10 +135,10 @@
             </div>
         </section>
 
-        <!-- CTA -->
+        
         <section class="bg-tierra text-white py-20">
             <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-                <h2 class="font-display text-4xl md:text-5xl mb-6 leading-tight">Visitanos</h2>
+                <h2 class="font-display text-4xl md:text-5xl mb-6 leading-tight">Visitános</h2>
                 <p class="text-white/80 text-lg font-light mb-10 text-pretty">Te esperamos en nuestras 6 sucursales para conocerte y ayudarte a cuidar tu columna.</p>
                 <a href="index.html#sucursales" class="inline-flex items-center gap-2 bg-white text-tierra px-10 py-4 rounded-full text-lg font-medium hover:bg-claro transition-colors">
                     Ver sucursales
@@ -185,19 +186,19 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
+    
     <a href="https://wa.me/5493513323096?text=Hola,%20quiero%20consultar" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-tierra rounded-full flex justify-center items-center text-white z-50 shadow-lg hover:bg-cobre transition-colors group" aria-label="WhatsApp">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
     </a>
 
-    <!-- GSAP -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         if (typeof gsap === 'undefined') return;
 
-        // Mobile Menu
+
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
